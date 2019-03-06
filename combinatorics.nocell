@@ -1,0 +1,18 @@
+#lang s-exp nocell
+
+(provide fact
+         fact*
+         binomial-coeff)
+
+(define (fact n)
+    (if* (= n 0)
+         1
+         (* n (fact (- n 1)))))
+
+(define (fact* n acc)
+  (if* (= n 0)
+       acc
+       (fact* (- n 1) (* n acc))))
+
+(define (binomial-coeff n k)
+  (/ (fact n) (* (fact k) (fact (- n k)))))

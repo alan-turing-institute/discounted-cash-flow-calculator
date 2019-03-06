@@ -1,0 +1,9 @@
+#lang s-exp nocell
+
+(provide result)
+
+(require "combinatorics.nocell")
+
+(define result (binomial-coeff 6 4))
+
+(stack-print result)
