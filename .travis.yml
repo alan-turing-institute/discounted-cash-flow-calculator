@@ -9,7 +9,7 @@ install:
 script:
 - git clone https://github.com/alan-turing-institute/nocell
 - cd nocell
-- git checkout develop
+- git checkout master
 - raco pkg install --auto
 - "./nocell-to-ods ../old-dcf.rkt ../old-dcf.ods"
 deploy:
