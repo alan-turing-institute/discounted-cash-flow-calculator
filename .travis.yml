@@ -22,6 +22,5 @@ deploy:
   api_key:
     secure: "Ip42Ullh6EAH9d7lu0FD2STvLCpiNAKQXKnLD1QSJsAeRoYsytD4hP5GL3iYyelGKJlYRjQgHfguzlqKL00Nk8PKJlm3c/qOLdrHGTsQ3R28d4fLZBvrB0BE2I6nEdvtjtTxUX6bsKXBXkZX6oe2wjyrTUo1kLJ2UWRqIgXJHYWIfgDPeNGnXnYacWbcQlux/2EMLhancz4rmNFyfReSXGrQmJZc+bsF4JxAEiw+uNtcqNKNpLTGAed63nSdVUVJM0EtatKnAO5q+jFQ9BuGe/bCyS/DlJd0B1jVpwToJNjmVGocLQ7Nv5y7D4KcSH0RKcFi3D3eeSj7gSU1jOSVzVwX6bCRFqbx/pxW+WW57XSE2jvIjE8sXsDfDeh90M8lmLXkyHSIWyOrJD6sHjcMe1dOzqvLcb3CjL++nmZ9H8ZBsO/U5YnZd0QYWLDnJ9bcHvKa0ODWLcFcPTB1x4Dpq4T0nvUM1zP4wpxP5l4zKRXaB72sB4yfVstQeqYlC+xCmh6Fyez8/dsDfM/mHgxOgiOFQQYTK27wThgBzNWgRRK9LKI0cOfd62kCbHYEAlD3zZitTITMluIj8J2XNWSNevdfs/CuDIWSnqYKt/80iX42GrDEwQ4iAGCY3v1ceo+zkQQPvP7IN+U/OzQh1/XJ9BjUK5XjQYIvAJXldFWuBEs="
   file: "../old-dcf.ods"
+  draft: true
   skip_cleanup: true
-  on:
-    tags: true
