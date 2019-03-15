@@ -17,4 +17,4 @@
           (discount (last years) (terminal-value))])
      (total discounted-cashflows discounted-terminal-value)))
 
- (dcf-value (2020 2021 2022 2023) (-100 -50 150 500) 0.03 0.1))
+ (dcf-value (2020 2021 2022 2023) (-101 -50 150 500) 0.03 0.1))
