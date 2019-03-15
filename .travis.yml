@@ -1,26 +1,23 @@
 language: minimal
-
 branches:
   except:
-    - /^untagged/
-
+  - "/^untagged/"
 dist: xenial
-
 install:
-  - wget https://mirror.racket-lang.org/installers/7.2/racket-7.2-x86_64-linux.sh
-  - sudo bash racket-7.2-x86_64-linux.sh --unix-style --dest /usr
-
+- wget https://mirror.racket-lang.org/installers/7.2/racket-7.2-x86_64-linux.sh
+- sudo bash racket-7.2-x86_64-linux.sh --unix-style --dest /usr
 script:
-  - git clone https://github.com/alan-turing-institute/nocell 
-  - cd nocell
-  - git checkout develop
-  - raco pkg install --auto
-  - ./nocell-to-ods ../old-dcf.rkt ../old-dcf.ods
-
+- git clone https://github.com/alan-turing-institute/nocell
+- cd nocell
+- git checkout develop
+- raco pkg install --auto
+- "./nocell-to-ods ../old-dcf.rkt ../old-dcf.ods"
 deploy:
   provider: releases
   api_key:
-    secure: "Ip42Ullh6EAH9d7lu0FD2STvLCpiNAKQXKnLD1QSJsAeRoYsytD4hP5GL3iYyelGKJlYRjQgHfguzlqKL00Nk8PKJlm3c/qOLdrHGTsQ3R28d4fLZBvrB0BE2I6nEdvtjtTxUX6bsKXBXkZX6oe2wjyrTUo1kLJ2UWRqIgXJHYWIfgDPeNGnXnYacWbcQlux/2EMLhancz4rmNFyfReSXGrQmJZc+bsF4JxAEiw+uNtcqNKNpLTGAed63nSdVUVJM0EtatKnAO5q+jFQ9BuGe/bCyS/DlJd0B1jVpwToJNjmVGocLQ7Nv5y7D4KcSH0RKcFi3D3eeSj7gSU1jOSVzVwX6bCRFqbx/pxW+WW57XSE2jvIjE8sXsDfDeh90M8lmLXkyHSIWyOrJD6sHjcMe1dOzqvLcb3CjL++nmZ9H8ZBsO/U5YnZd0QYWLDnJ9bcHvKa0ODWLcFcPTB1x4Dpq4T0nvUM1zP4wpxP5l4zKRXaB72sB4yfVstQeqYlC+xCmh6Fyez8/dsDfM/mHgxOgiOFQQYTK27wThgBzNWgRRK9LKI0cOfd62kCbHYEAlD3zZitTITMluIj8J2XNWSNevdfs/CuDIWSnqYKt/80iX42GrDEwQ4iAGCY3v1ceo+zkQQPvP7IN+U/OzQh1/XJ9BjUK5XjQYIvAJXldFWuBEs="
+    secure: QI3X0XCQKM3nWYex0CqauRDKlb0CBADODRCQ1xNyus3L9SmWtPmcImLsjH7VLyLQZVNYYwSs3o+93mHdJEQsn6N3Rzd8/F6xMktX7//gWI6pNqcVZgI6KP5W1OUS6Ia4/GRkeI8sDj6eCm/Pj46jQ74xJKdbREEPU6/AmtQj3+i9nCYHNt//D+Xm2roTbSkYKWFa2nnX58FYgNMLYLnsWXAmKbLP5Wj0IhtaYmF/XMZ0htfoZ+YEoq/snS+Jmo9GPHnHxHK3HL+UpQVVffHqsnGby3AQ86amXL+AjCpQMVy16Wt9o02YzMABzoJuG/YHDqLfX1RwFqPpsV91nOSw6MswBDXxmRHTVWXoBEy8FRtV0A4zcMwd6ZBvX8BeOLN5a9qv1AnjdhiZ9DOvzhklYicB3WO+Rbb9yKCPuXIEDNrNbP/yFwfx5WHg7xkxkbIZ25EDQ7MmHwHuTnZt38k8qDhXoK48n20abYzAtYatX3HTZPzri/30z+eFSfXGf/paqnKJeKv8ybIb4MqtQ1dT2I5PyqZA4JF6T7iEBB3BdO841QHJeJ5fW17PiLA5ShxMgUOAR1dQaP5eZF5xbPelG5RJgd4luQ9ybUBGcmrQPLQHgbpuKdTYbDprkcb0zGPWLWVoOpIkXca7xy5aKvyS9lNb4TI05/ynSVPvcWTkcpM=
   file: "../old-dcf.ods"
   draft: true
   skip_cleanup: true
+  on:
+    repo: alan-turing-institute/discounted-cash-flow-calculator
