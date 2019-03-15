@@ -1,0 +1,14 @@
+language: minimal
+
+dist: xenial
+
+install:
+  - wget https://mirror.racket-lang.org/installers/7.2/racket-7.2-x86_64-linux.sh
+  - sudo bash racket-7.2-x86_64-linux.sh --unix-style --dest /usr
+
+script:
+  - git clone https://github.com/alan-turing-institute/nocell 
+  - cd nocell
+  - git checkout develop
+  - raco pkg install --auto
+  - ./nocell-to-ods ../old-dcf.rkt ../old-dcf.ods
