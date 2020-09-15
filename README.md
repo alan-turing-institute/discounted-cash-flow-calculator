@@ -28,7 +28,7 @@ This repository contains a calculator for valuing a company with
 - Run `racket valuation-1.rkt`
 - A spreadsheet `valuation-1.fods` is produced as output (in the 'flat' 
   [OpenDocument Spreadsheet](http://opendocument.xml.org/) file format), which should open with LibreOffice
-  (but not MS Excel).
+  (but currently not with MS Excel).
 - Look in `valuation-1.rkt` to understand the output it writes to stdout.
 
 ## Package contents
