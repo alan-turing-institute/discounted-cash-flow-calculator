@@ -15,7 +15,8 @@
 
 
 (require 'valuation
-         nocell/util)
+         nocell/cell
+         nocell/grid)
 
 ;; At this point the valuation is known:
 ;;
@@ -38,9 +39,7 @@
 (println (sheet-eval result-sheet))
 
 ;; Other backends allow us to produce spreadsheet models in a variety
-;; of formats...
+;; of formats (although currently just ods)...
 ;; 
-;; (sheet->ods   result-sheet)
-;; (sheet->excel result-sheet)
-;; ...
+(sheet-write-ods result-sheet "valuation-1.fods")
 
